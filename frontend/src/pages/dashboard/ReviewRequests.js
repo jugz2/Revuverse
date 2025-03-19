@@ -10,7 +10,7 @@ import {
   ClockIcon,
   TrashIcon
 } from '@heroicons/react/24/outline';
-import api from '../../api/axios';
+import api from '../../api/api';
 
 const ReviewRequests = () => {
   const location = useLocation();
