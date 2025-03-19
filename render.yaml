@@ -6,3 +6,21 @@ services:
     envVars:
       - key: REACT_APP_API_URL
         value: https://revuverse-backend.onrender.com
+
+  - type: web
+    name: revuverse-backend
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://your-mongodb-atlas-connection-string # Replace this with your actual MongoDB Atlas URI
+      - key: JWT_SECRET
+        value: 659f2a5f40af4d9c3006b30b336d811f9535d8516d0b000af6fa070114b6e2ce470d9c7cf4e4a0c84643fc769f3a4bde243c8005309edf60aaa8c89cd68a66a9
+      - key: JWT_EXPIRE
+        value: 30d
+      - key: FRONTEND_URL
+        value: https://revuverse-frontend.onrender.com
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
